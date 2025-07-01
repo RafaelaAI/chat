@@ -37,7 +37,11 @@
       padding: 12px 15px;
       display: flex;
       align-items: center;
-      font-weight: 600;
+      justify-content: space-between;
+    }
+    .user-info {
+      display: flex;
+      align-items: center;
     }
     .top-bar img {
       width: 36px;
@@ -45,8 +49,19 @@
       border-radius: 50%;
       margin-right: 10px;
     }
-    .top-bar .username {
+    .username {
       font-size: 16px;
+      font-weight: 600;
+    }
+    .top-icons {
+      display: flex;
+      gap: 12px;
+    }
+    .top-icons svg {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      fill: #262626;
     }
     .chat-frame {
       flex: 1;
@@ -86,13 +101,28 @@
 <body>
   <div class="phone-frame">
     <div class="top-bar">
-      <img src="foto1.jpg" alt="Perfil"/>
-      <span class="username">Rafaela Victor</span>
+      <div class="user-info">
+        <img src="foto1.jpg" alt="Perfil"/>
+        <span class="username">Rafaela Victor</span>
+      </div>
+      <div class="top-icons">
+        <!-- Telefone -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.64.58 1 1 0 011 1v3.61a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.61a1 1 0 011 1 11.72 11.72 0 00.58 3.64 1 1 0 01-.21 1.11z"/>
+        </svg>
+        <!-- Vídeo -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M17 10.5V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-3.5l4 4v-11l-4 4z"/>
+        </svg>
+        <!-- Etiqueta -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M20.59 13.41l-8-8A2 2 0 0011.17 5H4a1 1 0 00-1 1v7.17a2 2 0 00.59 1.41l8 8a2 2 0 002.83 0l6.17-6.17a2 2 0 000-2.83zM7.5 9A1.5 1.5 0 119 7.5 1.5 1.5 0 017.5 9z"/>
+        </svg>
+      </div>
     </div>
     <div class="chat-frame">
       <iframe src="https://typebot.co/imobili-ria-preatendimento" allow="clipboard-write"></iframe>
       <div class="bottom-bar">
-        <!-- Visual apenas ilustrativo -->
         <input type="text" placeholder="Enviar mensagem..."/>
         <img src="https://img.icons8.com/ios-glyphs/30/000000/filled-sent.png" alt="Enviar"/>
       </div>
